@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.paolo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    seleniumVersion = '4.15.0'
+    junitVersion = '5.9.3'
+}
+
+dependencies {
+    implementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:${junitVersion}")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation fileTree(includes: ['*.jar'], dir: 'libs')
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
