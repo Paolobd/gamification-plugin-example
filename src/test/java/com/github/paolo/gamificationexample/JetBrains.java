@@ -1,4 +1,4 @@
-package com.github.paolo.gamificationexample.jetbrains;
+package com.github.paolo.gamificationexample;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ public class JetBrains {
     @FindBy(xpath = "//*[@data-test-marker='Developer Tools']")
     public WebElement seeDeveloperToolsButton;
 
-    @FindBy(xpath = "//*[@data-test='suggestion-action']")
+    @FindBy(xpath = "//*[@data-test='main-submenu-suggestions']")
     public WebElement findYourToolsButton;
 
     @FindBy(xpath = "//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']")

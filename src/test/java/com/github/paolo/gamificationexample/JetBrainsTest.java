@@ -1,4 +1,4 @@
-package com.github.paolo.gamificationexample.jetbrains;
+package com.github.paolo.gamificationexample;
 
 import com.github.paolobd.gamegui.GameGui;
 import org.junit.jupiter.api.*;
@@ -24,7 +24,7 @@ public class JetBrainsTest {
         options.addArguments("--remote-allow-origins=*");
         //options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        //driver = GameGui.gamifyWebDriver(driver);
+        driver = GameGui.gamifyWebDriver(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.jetbrains.com/");
